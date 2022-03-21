@@ -129,7 +129,7 @@ mysqli_close($connect1);
             <hr />
             <button class="btn btn-block btn-primary" type="submit" name="btn-login">Sign In</button>
             <hr />
-            <a href="register.php">Not registered yet? Click here</a>
+            <a href="LOGIN/register.php">Not registered yet? Click here</a>
         </form>
     </div>
         <div class="manageProduct w-75 mt-3">    
@@ -150,6 +150,12 @@ mysqli_close($connect1);
                     <?= $tbody1;?>
                 </tbody>
             </table>
+            <table>
+            <tr>
+                        <td><button class='btn btn-success' type="submit">Insert Product</button></td>
+                        <td><a href="index.php"><button class='btn btn-warning' type="button">Home</button></a></td>
+                    </tr>
+        </table>
         </div>
     </body>
 </html>

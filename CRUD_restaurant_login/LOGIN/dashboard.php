@@ -91,6 +91,12 @@ mysqli_close($connect);
                         <?= $tbody ?>
                     </tbody>
                 </table>
+                <table>
+                <tr>
+                        <td><button class='btn btn-success' type="submit">Insert Product</button></td>
+                        <td><a href="home.php"><button class='btn btn-warning' type="button">Home</button></a></td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
