@@ -6,8 +6,8 @@ if (isset($_SESSION['user']) != "") {
 if (isset($_SESSION['adm']) != "") {
     header("Location: dashboard.php"); // redirects to home.php
 }
-require_once 'components/db_connect.php';
-require_once 'components/file_upload.php';
+require_once '../actions/db_connect.php';
+require_once '../actions/file_upload.php';
 $error = false;
 $fname = $lname = $email = $date_of_birth = $pass = $picture = '';
 $fnameError = $lnameError = $emailError = $dateError = $passError = $picError = '';

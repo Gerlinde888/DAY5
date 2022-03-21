@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'components/db_connect.php';
+require_once '../actions/db_connect.php';
 
 // if adm will redirect to dashboard
 if (isset($_SESSION['adm'])) {
@@ -9,7 +9,7 @@ if (isset($_SESSION['adm'])) {
 }
 // if session is not set this will redirect to login page
 if (!isset($_SESSION['adm']) && !isset($_SESSION['user'])) {
-    header("Location: index.php");
+    header("Location: ../index.php");
     exit;
 }
 

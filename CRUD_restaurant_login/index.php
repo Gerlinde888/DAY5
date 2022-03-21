@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'LOGIN/components/db_connect.php';
+require_once 'actions/db_connect.php';
 
 // it will never let you open index (login) page if session is set
 if (isset($_SESSION['user']) != "") {
@@ -152,7 +152,6 @@ mysqli_close($connect1);
             </table>
             <table>
             <tr>
-                        <td><button class='btn btn-success' type="submit">Insert Product</button></td>
                         <td><a href="index.php"><button class='btn btn-warning' type="button">Home</button></a></td>
                     </tr>
         </table>
