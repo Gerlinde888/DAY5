@@ -94,6 +94,7 @@ mysqli_close($connect);
             <button class="btn btn-block btn-primary" type="submit" name="btn-login">Sign In</button>
             <hr />
             <a href="register.php">Not registered yet? Click here</a>
+            
         </form>
     </div>
 </body>
