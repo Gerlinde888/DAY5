@@ -66,12 +66,12 @@ mysqli_close($connect);
 <?php 
 require_once 'actions/db_connect.php';
 
-$sql1 = "SELECT * FROM dishes order by name asc" ;
-$result1 = mysqli_query($connect1 ,$sql1);
-$tbody1=''; //this variable will hold the body for the table
-if(mysqli_num_rows($result1)  > 0) {     
-    while($row1 = mysqli_fetch_array($result1, MYSQLI_ASSOC)){         
-        $tbody1 .= "<tr>
+$sql = "SELECT * FROM dishes order by name asc" ;
+$result = mysqli_query($connect ,$sql);
+$tbody=''; //this variable will hold the body for the table
+if(mysqli_num_rows($result)  > 0) {     
+    while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){         
+        $tbody .= "<tr>
             <td><img class='img-thumbnail' src='pictures/" .$row['picture']."'</td>
             <td>" .$row['name']."</td>
             <td>" .$row['price']."</td>
@@ -80,10 +80,10 @@ if(mysqli_num_rows($result1)  > 0) {
             </tr>";
     };
 } else {
-    $tbody1 =  "<tr><td colspan='5'><center>No Data Available </center></td></tr>";
+    $tbody =  "<tr><td colspan='5'><center>No Data Available </center></td></tr>";
 }
 
-mysqli_close($connect1);
+mysqli_close($connect);
 ?>
 
 <!DOCTYPE html>
@@ -147,7 +147,7 @@ mysqli_close($connect1);
                     </tr>
                 </thead>
                 <tbody>
-                    <?= $tbody1;?>
+                    <?= $tbody;?>
                 </tbody>
             </table>
             <table>
